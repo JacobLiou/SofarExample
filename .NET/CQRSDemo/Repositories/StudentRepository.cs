@@ -21,7 +21,7 @@ public class StudentRepository : IStudentRepository
 
     public Task<int> DeleteAsync(int Id)
     {
-        throw new NotImplementedException();
+        return _myDbContext.Students.Where(c => c.Id == 1).ExecuteDeleteAsync();
     }
 
     public async Task<List<Student>> GetAllAsync()
