@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApexChartsDemo", "ApexChartsDemo.csproj", "{7A8AC7A7-4158-41A0-B861-29BD3F02F222}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A8AC7A7-4158-41A0-B861-29BD3F02F222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A8AC7A7-4158-41A0-B861-29BD3F02F222}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A8AC7A7-4158-41A0-B861-29BD3F02F222}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A8AC7A7-4158-41A0-B861-29BD3F02F222}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F8EB02CB-5D24-470F-BCCD-4F87F76F0B6A}
+	EndGlobalSection
+EndGlobal
