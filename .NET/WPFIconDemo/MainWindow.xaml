@@ -1,0 +1,68 @@
+﻿<Window x:Class="WPFIconDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:local="clr-namespace:WPFIconDemo"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:fa1="http://schemas.fontawesome.com/icons/"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450"
+        Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    Width="200">
+            <Button Width="100"
+                    Height="28">
+                <WrapPanel>
+                    <ui:SymbolIcon Width="20"
+                                   Height="20"
+                                   FontSize="48"
+                                   Foreground="CornflowerBlue"
+                                   Symbol="AddSquare32"
+                                   ToolTip="Accessibility16" />
+                    <TextBlock>点我</TextBlock>
+                </WrapPanel>
+
+            </Button>
+
+            <Button Width="100"
+                    Height="28">
+                <WrapPanel>
+                    <!--<Image Source="{StaticResource fa:}" />-->
+                    <TextBlock>点我</TextBlock>
+                </WrapPanel>
+            </Button>
+
+            <Button HorizontalAlignment="Left"
+                    Height="35"
+                    Width="182"
+                    Margin="5,30,0,0">
+                <StackPanel Orientation="Horizontal">
+                    <fa1:FontAwesome FontSize="28"
+                                     Icon="Solid_Folder"
+                                     Margin="0,0,5,0" />
+                    <TextBlock VerticalAlignment="Center">My Folders</TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1"
+                    HorizontalAlignment="Center"
+                    Orientation="Vertical">
+            <Button Margin="5"
+                    hc:IconElement.Geometry="{StaticResource AddGeometry}"
+                    Content="新增" />
+            <Button Margin="5"
+                    hc:IconElement.Geometry="{StaticResource AlignBottomGeometry}"
+                    Content="导入Excel" />
+        </StackPanel>
+    </Grid>
+</Window>

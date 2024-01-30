@@ -1,0 +1,22 @@
+﻿<Application x:Class="WPFIconDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:local="clr-namespace:WPFIconDemo"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ui:ThemesDictionary Theme="Dark" />
+                <ui:ControlsDictionary />
+                <!--  Geometries  -->
+                <!--<ResourceDictionary Source="/Styles/Geometries/Custom.xaml" />-->
+
+                <!--  HandyControl  -->
+                <!--站在巨人肩膀上构建Modern UI 或者自己有能力造轮子 去完全掌握WPF绘制原理-->
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/SkinDefault.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/HandyControl;component/Themes/Theme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
