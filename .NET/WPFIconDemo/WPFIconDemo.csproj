@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="InLib\**" />
+    <EmbeddedResource Remove="InLib\**" />
+    <None Remove="InLib\**" />
+    <Page Remove="InLib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FontAwesome5" Version="2.1.11" />
     <PackageReference Include="HandyControl" Version="3.4.0" />
     <PackageReference Include="Ping9719.WpfEx" Version="0.6.6" />
