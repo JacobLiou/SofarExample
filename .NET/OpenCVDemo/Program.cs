@@ -8,7 +8,7 @@ using OpenCvSharp;
 using Mat mat = Cv2.ImRead(Path.Combine(Environment.CurrentDirectory, "background.jpg"));
 if(mat == null )
     return;
-Cv2.ImShow("MU", mat);
+//Cv2.ImShow("MU", mat);
 
 //平整切割成16块
 int columnCount = 4;
@@ -22,7 +22,9 @@ for (int i = 0; i < columnCount; i++)
     {
         Rect rect = new Rect(i * width, j * height, width, height);
         Mat croppedImage = new Mat(mat, rect);
-        croppedImage.SaveImage(Path.Combine(Environment.CurrentDirectory, $"Cropped{i}.jpg"));
+        croppedImage.SaveImage(Path.Combine(Environment.CurrentDirectory, $"Cropped{i}{j}.jpg"));
     }
 }
+
+Console.ReadKey();
 
