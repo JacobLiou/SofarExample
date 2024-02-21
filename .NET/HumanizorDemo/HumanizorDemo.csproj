@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="InLib\**" />
+    <EmbeddedResource Remove="InLib\**" />
+    <None Remove="InLib\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Humanizer.Core" Version="2.14.1" />
   </ItemGroup>
 
