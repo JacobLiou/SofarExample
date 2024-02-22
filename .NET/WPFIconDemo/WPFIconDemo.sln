@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonDrawing", "InLib\Comm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvvmDialogsDemo", "InLib\MvvmDialogsDemo\MvvmDialogsDemo.csproj", "{11B10DF3-CE30-4A7A-A152-AFCA31F49188}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCloudDemo", "InLib\WordCloudDemo\WordCloudDemo.csproj", "{B5FAF262-96D1-4E89-828A-8E788C2FC022}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordCloudDemo", "InLib\WordCloudDemo\WordCloudDemo.csproj", "{B5FAF262-96D1-4E89-828A-8E788C2FC022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "InLib\BlazorApp1\BlazorApp1.csproj", "{16C961A1-A860-46A5-B122-A5DFD608E965}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{B5FAF262-96D1-4E89-828A-8E788C2FC022}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5FAF262-96D1-4E89-828A-8E788C2FC022}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5FAF262-96D1-4E89-828A-8E788C2FC022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C961A1-A860-46A5-B122-A5DFD608E965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C961A1-A860-46A5-B122-A5DFD608E965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C961A1-A860-46A5-B122-A5DFD608E965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C961A1-A860-46A5-B122-A5DFD608E965}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
