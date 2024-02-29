@@ -10,3 +10,146 @@ Welcome to your new app.
 
 <Button Color="Color.Primary" Icon="fa-solid fa-font-awesome" Text="测试" />
 
+<Table TItem="StudentModel" AutoGenerateColumns="true" Items="StudentList" ShowToolbar="true"></Table>
+
+@code {
+
+    private static readonly Random random = new Random();
+
+    private List<StudentModel>? StudentList = GenerateUserInfos();
+
+    protected override Task OnInitializedAsync()
+    {
+        // StudentList = GenerateUserInfos();
+        return base.OnInitializedAsync();
+    }
+
+    /// <summary>
+    /// 模拟数据库用户信息生成
+    /// </summary>
+    /// <returns></returns>
+    public static List<StudentModel> GenerateUserInfos()
+    {
+        return new List<StudentModel>(Enumerable.Range(1, 200).Select(i => new StudentModel()
+            {
+                StudentID = i,
+                ClassName = $"时光 {i} 班",
+                Name = GenerateRandomName(),
+                Age = random.Next(20, 50),
+                Gender = GenerateRandomGender()
+            }));
+    }
+
+    /// <summary>
+    /// 生成随机性别
+    /// </summary>
+    /// <returns></returns>
+    public static string GenerateRandomGender()
+    {
+        string[] genders = { "男", "女" };
+        return genders[random.Next(genders.Length)];
+    }
+
+    /// <summary>
+    /// 生成随机姓名
+    /// </summary>
+    /// <returns></returns>
+    public static string GenerateRandomName()
+    {
+        string[] surnames = { "张", "王", "李", "赵", "刘" };
+        string[] names = { "明", "红", "强", "丽", "军" };
+        string surname = surnames[random.Next(surnames.Length)];
+        string name = names[random.Next(names.Length)];
+        return surname + name;
+    }
+
+    /// <summary>
+    /// 数据查询
+    /// </summary>
+    /// <param name="options">options</param>
+    /// <returns></returns>
+    private Task<QueryData<StudentModel>> OnQueryAsync(QueryPageOptions options)
+    {
+        List<StudentModel> studentInfoData = StudentList;
+
+        // 数据模糊过滤筛选
+        if (!string.IsNullOrWhiteSpace(options.SearchText))
+        {
+            studentInfoData = studentInfoData.Where(x => x.Name.Contains(options.SearchText)).ToList();
+        }
+
+        return Task.FromResult(new QueryData<StudentModel>()
+            {
+                Items = studentInfoData.Skip((options.PageIndex - 1) * options.PageItems).Take(options.PageItems).ToList(),
+                TotalCount = studentInfoData.Count()
+            });
+    }
+
+    /// <summary>
+    /// 模拟数据增加和修改操作
+    /// </summary>
+    /// <param name="studentInfo">studentInfo</param>
+    /// <param name="changedType">changedType</param>
+    /// <returns></returns>
+    public Task<bool> OnSaveAsync(StudentModel studentInfo, ItemChangedType changedType)
+    {
+        if (changedType.ToString() == "Update")
+        {
+            var queryInfo = StudentList.FirstOrDefault(x => x.StudentID == studentInfo.StudentID);
+            if (queryInfo != null)
+            {
+                queryInfo.Age = studentInfo.Age;
+                queryInfo.ClassName = studentInfo.ClassName;
+                queryInfo.Name = studentInfo.Name;
+                queryInfo.Gender = studentInfo.Gender;
+            }
+        }
+        else if (changedType.ToString() == "Add")
+        {
+            StudentList.Add(studentInfo);
+        }
+        return Task.FromResult(true);
+    }
+
+    /// <summary>
+    /// 数据删除
+    /// </summary>
+    /// <param name="items">items</param>
+    /// <returns></returns>
+    private Task<bool> OnDeleteAsync(IEnumerable<StudentModel> items)
+    {
+        items.ToList().ForEach(i => StudentList.Remove(i));
+        return Task.FromResult(true);
+    }
+
+
+
+    public class StudentModel
+    {
+
+        /// <summary>
+        /// StudentID
+        /// </summary>
+        public int StudentID { get; set; }
+
+        /// <summary>
+        /// 班级名称
+        /// </summary>
+        public string ClassName { get; set; }
+
+        /// <summary>
+        /// 学生姓名
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// 学生年龄
+        /// </summary>
+        public int Age { get; set; }
+
+        /// <summary>
+        /// 学生性别
+        /// </summary>
+        public string Gender { get; set; }
+    }
+}
