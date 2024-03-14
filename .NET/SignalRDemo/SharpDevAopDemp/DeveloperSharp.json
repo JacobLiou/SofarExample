@@ -1,0 +1,13 @@
+{
+    "DeveloperSharp":
+    {
+       "AspectObject":
+       [
+        {
+          "name": "SharpDevAopDemp.Interceptor1", //横切面拦截器类
+          "scope": "SharpDevAopDemp.PersonManage", //被拦截的主程序类
+          "method": "GetInfo1" //被拦截的方法
+        }
+       ]
+    }
+  }

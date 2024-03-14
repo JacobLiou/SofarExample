@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "C#: SignalRClient",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}\\SignalRClient\\SignalRClient.csproj",
+            "launchConfigurationId": "TargetFramework=;SignalRClient"
+        }
+    ]
+}
