@@ -26,4 +26,22 @@ public class Interceptor1 : AspectModel
     {
 
     }
+
+    public void UseGoto()
+    {
+        // https://stackoverflow.com/questions/3517726/what-is-wrong-with-using-goto
+        for (int i = 0; i < 1000; i++)
+        {
+            for (int j = 0; j < 10000; j++)
+            {
+                if(j = 100)
+                    goto OutNested;
+            }
+        }
+
+    OutNested:
+        var x = 1 +2;
+        Console.WriteLine(x);
+
+    }
 }
