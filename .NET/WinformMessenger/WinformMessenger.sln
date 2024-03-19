@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormHostApp", "WinformEm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayWrightApp1", "WinformEmbedApp\PlayWrightApp1\PlayWrightApp1.csproj", "{FD5C48B1-9E5B-4947-8D0D-3F84070CD575}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsApp1", "WinformEmbedApp\WinFormsApp1\WinFormsApp1.csproj", "{EDAFD910-E44D-4363-B550-0113F51154BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinFormsApp1", "WinformEmbedApp\WinFormsApp1\WinFormsApp1.csproj", "{EDAFD910-E44D-4363-B550-0113F51154BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpreadSheetDemo", "WinformEmbedApp\SpreadSheetDemo\SpreadSheetDemo.csproj", "{C003FA76-78C5-4FC5-978F-0692C05F4302}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EDAFD910-E44D-4363-B550-0113F51154BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDAFD910-E44D-4363-B550-0113F51154BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDAFD910-E44D-4363-B550-0113F51154BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C003FA76-78C5-4FC5-978F-0692C05F4302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C003FA76-78C5-4FC5-978F-0692C05F4302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C003FA76-78C5-4FC5-978F-0692C05F4302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C003FA76-78C5-4FC5-978F-0692C05F4302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

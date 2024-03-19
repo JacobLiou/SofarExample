@@ -9,14 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="WinformEmbedApp\**" />
-    <EmbeddedResource Remove="WinformEmbedApp\**" />
-    <None Remove="WinformEmbedApp\**" />
+    <PackageReference Include="unvell.ReoGrid.dll" Version="3.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="SunnyUI" Version="3.6.3" />
+    <None Update="CommonConfigTest.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
