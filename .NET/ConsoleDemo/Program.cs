@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Reflection.Emit;
 using System.Text.Json;
 using ConsoleDemo;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 
 
@@ -12,6 +13,13 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+
+      var builder = Host.CreateApplicationBuilder(args);
+      builder.Build();
+      var yourname = builder.Configuration["yourname"];
+      Console.WriteLine(yourname);
+
+
         // var cademo = new CatsleDemo();
         // cademo.UseDicAdaptor();
 
