@@ -3,8 +3,12 @@
 
 
 using Spectre.Console;
+using SpectreConsoleDemo;
 
-Console.WriteLine("Hello Spectre");
+//Console.WriteLine("Hello Spectre");
+
+ParallelUse.Use();
+Console.ReadLine();
 
 AnsiConsole.WriteLine("Hello Spectre");
 AnsiConsole.Markup("[underline red]Hello [/] [Blue]World[/][DarkMagenta]!!![/]");
