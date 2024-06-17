@@ -14,10 +14,15 @@ internal class Program
     private static void Main(string[] args)
     {
 
-      var builder = Host.CreateApplicationBuilder(args);
-      builder.Build();
-      var yourname = builder.Configuration["yourname"];
-      Console.WriteLine(yourname);
+        string hello = "hello";
+        var isIntern = string.IsInterned(hello);
+        Console.WriteLine(isIntern);
+
+
+        var builder = Host.CreateApplicationBuilder(args);
+        builder.Build();
+        var yourname = builder.Configuration["yourname"];
+        Console.WriteLine(yourname);
 
 
         // var cademo = new CatsleDemo();
