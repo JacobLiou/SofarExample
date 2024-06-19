@@ -9,6 +9,9 @@ def run(playwright : Playwright) -> None :
         page.mouse.move(350, 200)
         page.mouse.up()
 
+        # 浏览器页面使用键鼠
+        # page.keyboard.down("Control")
+
 
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
