@@ -1,13 +1,15 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
+using MvvmCross.Platforms.Wpf.Views;
+using MvvmCross;
 
 namespace ui;
 
 /// <summary>
 /// Interaction logic for App.xaml
 /// </summary>
-public partial class App : Application
+public partial class App : MvxApplication
 {
     private IServiceProvider? _serviceProvider;
 
@@ -15,19 +17,28 @@ public partial class App : Application
 
     public App()
     {
-        //方式1
+        ////方式1
         //var serviceCollection = new ServiceCollection();
         //ConfigureServices(serviceCollection);
         //_serviceProvider = serviceCollection.BuildServiceProvider();
 
-        //方式2
-        _host = Host.CreateDefaultBuilder()
-                     .ConfigureServices((context, services) =>
-                     {
-                         ConfigureServices(context, services);
-                     })
-                     .Build();
+        ////方式2
+        //_host = Host.CreateDefaultBuilder()
+        //             .ConfigureServices((context, services) =>
+        //             {
+        //                 ConfigureServices(context, services);
+        //             })
+        //             .Build();
     }
+
+    protected override void RegisterSetup()
+    {
+        base.RegisterSetup();
+        //Mvx.IoCProvider.RegisterSingleton<MainWindow>();
+
+    }
+
+
 
     private void ConfigureServices(IServiceCollection services)
     {
