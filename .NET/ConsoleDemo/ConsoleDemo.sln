@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayWrightDemo", "InDemo\Pl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpectreConsoleDemo", "InDemo\SpectreConsoleDemo\SpectreConsoleDemo.csproj", "{1AD0356F-C010-4B1D-A91A-5E272CD1A500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrawlDemo", "InDemo\CrawlDemo\CrawlDemo.csproj", "{2F50AC46-88C1-4851-BBB9-1ADC0AFF58F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrawlDemo", "InDemo\CrawlDemo\CrawlDemo.csproj", "{2F50AC46-88C1-4851-BBB9-1ADC0AFF58F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RougamoDemo", "InDemo\RougamoDemo\RougamoDemo.csproj", "{55A781FF-18F0-4AF9-92C1-90F0F9956CD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{2F50AC46-88C1-4851-BBB9-1ADC0AFF58F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F50AC46-88C1-4851-BBB9-1ADC0AFF58F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F50AC46-88C1-4851-BBB9-1ADC0AFF58F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A781FF-18F0-4AF9-92C1-90F0F9956CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A781FF-18F0-4AF9-92C1-90F0F9956CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A781FF-18F0-4AF9-92C1-90F0F9956CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A781FF-18F0-4AF9-92C1-90F0F9956CD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
