@@ -30,6 +30,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        //Rougamo 实现 Aop功能是通过编译时修改IL代码，往代码增加对应的生命周期代码。那他为什么可以做到呢？其实是借用了Fody->Mono.Cecil 的方式。
         Add(1, 2);
         AddAsync(1, 2);
         Divide(1, 2);
