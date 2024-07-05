@@ -30,7 +30,8 @@ static class Program
         var serviceCollection = new ServiceCollection();
         serviceCollection.AddLogging(builder =>
         {
-            builder.ClearProviders();
+            //如果不清除默认的微软日志记录器 会导致重复记录日志
+            //builder.ClearProviders();
             builder.AddSerilog();
         });
 
