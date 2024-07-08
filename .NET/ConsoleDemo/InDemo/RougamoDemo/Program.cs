@@ -4,6 +4,7 @@
 using Rougamo.Context;
 using Rougamo;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 [AttributeUsage(AttributeTargets.Method)]
 public class LoggingAttribute : MoAttribute
@@ -34,6 +35,39 @@ internal class Program
         Add(1, 2);
         AddAsync(1, 2);
         Divide(1, 2);
+
+        string jsonString =
+            @"{
+              ""Date"": ""2019-08-01T00:00:00"",
+              ""Temperature"": 25,
+              ""Summary"": ""Hot"",
+              ""DatesAvailable"": [
+                ""2019-08-01T00:00:00"",
+                ""2019-08-02T00:00:00""
+              ],
+              ""TemperatureRanges"": {
+                  ""Cold"": {
+                      ""High"": 20,
+                      ""Low"": -10
+                  },
+                  ""Hot"": {
+                      ""High"": 60,
+                      ""Low"": 20
+                  }
+              }
+            }
+            ";
+
+
+        var json = """
+            {
+                "Date" : "2019-08-01T00:00:00",
+                "Temperature": 25,
+            }
+            """;
+
+        JObject.Parse(json);
+
     }
 
     [Logging]
