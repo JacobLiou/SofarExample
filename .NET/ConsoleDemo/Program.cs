@@ -13,6 +13,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        CursorSpinWaiting.Process();
 
         string hello = "hello";
         var isIntern = string.IsInterned(hello);
