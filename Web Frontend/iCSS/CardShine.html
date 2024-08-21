@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        :root {
+            --pic: url(./08-.jpg);
+        }
+
+        .g-container {
+            position: relative;
+            width: 350px;
+            height: 500px;
+            margin: auto;
+            border-radius: 30px;
+            overflow: hidden;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: var(--pic);
+                
+                z-index: -1;
+                border-radius: 30px;
+            }
+
+            &::before {
+                inset: 0;
+                filter: blur(20px);
+            }
+
+            &::after {
+                inset: 50px;
+            }
+        }
+
+        .g-filter {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .g-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="g-container">
+        <div class="g-filter"></div>
+        <div class="g-image"></div>
+    </div>
+</body>
+</html>
